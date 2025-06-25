@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prompt manager</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container"> 
+        <!--hope i could make it roundish-->
+        <header>
+            <h1 class="container-header">manage your prompts</h1>
+            <div class="tabs">
+                <button class="tab active" data-tab="prompts">my prompts</button>
+                <button class="tab" data-tab="add">add new</button>
+            </div>
+        </header>
+
+        <!--prompts tab-->
+        <div id="prompts-tab" class="tab-content active">
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search prompts...">
+                <button id="search-button">🔍</button>
+            </div>
+      
+            <div class="prompts-list">
+                <div class="state">
+                    <p class="noprompts">No prompts saved yet</p>
+                    <!--
+                    <button class="add-prompt">Add your first prompt</button>
+                    -->
+                </div>
+            </div>
+        </div>
+            
+        
+        <div id="add-tab" class="tab-content">
+            <div class="form-group">
+                <label for="prompt-title">Title</label>
+                <input type="text" id="prompt-title" placeholder="Short descriptive title">
+            </div>
+
+            
+            <div class="form-group">
+                <label for="prompt-content">prompt content</label>
+                <textarea id="prompt-content" rows="5" placeholder="enter your prompt here..."></textarea>
+            </div>
+
+            <div class="actions">
+                <button id="save">save prompt</button>
+                <button id="cancel">cancel</button>
+            </div>
+  
+            <div class="actions">
+                <button id="save">Save Prompt</button>
+                <button id="cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
