@@ -41,16 +41,14 @@ body {
   color: #333;
   display: flex;
   flex-direction: column;
-  background: #e0e0e0; 
 }
 
 .container {
   display: flex;
   flex-direction: column;
   flex: 1;
-  background: linear-gradient(cyan, rgb(164, 249, 249));
+  background: linear-gradient(rgb(1, 206, 206), rgb(51, 203, 132), rgb(91, 176, 176));
   border-radius: 25px; 
-  margin: 5px; 
   overflow: hidden; 
 }
 
@@ -61,7 +59,7 @@ body {
 /* header & tabz */
 header {
   margin-bottom: 20px;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1.5px solid #ffffff;
   padding-bottom: 15px;
 }
 
@@ -69,7 +67,6 @@ header {
   display: flex;
   border-radius: 15px;
   padding: 6px;
-  background-color: rgba(245, 245, 245, 0.491);
 }
 
 /* why is there no way to have the tab-complete complete names of elements already in my html file */
@@ -77,18 +74,20 @@ header {
 .tab {
   flex: 1;
   padding: 10px 15px;
+  margin: 4px;
   text-align: center;
-  background: none;
+  background: none; 
   border: none;
   cursor: pointer;
   font-weight: 600;
   border-radius: 15px;
   transition: all 0.3s ease;
+  background-color: rgb(160, 160, 252);
 }
 
 .tab.active {
-  background-color: rgb(50, 230, 170);
-    color: #000;
+  background-color: rgb(173, 255, 232);
+  color: #000;
 }
 
 
