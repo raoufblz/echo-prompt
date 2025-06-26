@@ -82,12 +82,11 @@ header {
   font-weight: 600;
   border-radius: 15px;
   transition: all 0.3s ease;
-  background-color: rgb(160, 160, 252);
+  background-color: white;
 }
 
 .tab.active {
-  background-color: rgb(173, 255, 232);
-  color: #000;
+  color: #7360ff;
 }
 
 
@@ -205,7 +204,7 @@ header {
 
 /* the add tab */
 #add-tab {
-  padding: 15px;
+  padding: 10px;
 }
 
 .form-group {
@@ -220,10 +219,10 @@ header {
 
 .form-group input,
 .form-group textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  width: 96%;
+  padding: 7px;
+  border: none;
+  border-radius: 7px;
   font-size: 14px;
 }
 
@@ -245,3 +244,9 @@ header {
 #cancel { background: #f1f3f4; color: #5f6368; }
 
 
+.input-box{
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+}
