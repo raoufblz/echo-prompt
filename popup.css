@@ -1,5 +1,4 @@
 html {
-  background-color: transparent !important;
   height: 100%;
 }
 
@@ -9,7 +8,6 @@ body {
   padding: 0;
   height: 100%;
   border-radius: 35px;
-  overflow: hidden;
   position: relative;
 }
 
@@ -31,9 +29,7 @@ html, body {
   height: 500px;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   font-family: sans-serif;
-  background-color: transparent; /* does this even do anything */
 }
 
 body {
@@ -48,7 +44,6 @@ body {
   flex-direction: column;
   flex: 1;
   background: linear-gradient(rgb(1, 206, 206), rgb(51, 203, 132), rgb(91, 176, 176));
-  border-radius: 25px; 
   overflow: hidden; 
 }
 
@@ -58,11 +53,21 @@ body {
 
 /* header & tabz */
 header {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   border-bottom: 1.5px solid #ffffff;
-  padding-bottom: 15px;
+  padding-bottom: 5px;
 }
 
+.theme-btn{
+  border: blue ;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.header-theme{
+  display: flex;  
+  justify-content: space-around;
+}
 .tabs {
   display: flex;
   border-radius: 15px;
@@ -82,8 +87,13 @@ header {
   font-weight: 600;
   border-radius: 15px;
   transition: all 0.3s ease;
+  background-color: rgb(243, 243, 243);
+}
+
+.tab:hover{
   background-color: white;
 }
+
 
 .tab.active {
   color: #7360ff;
@@ -241,8 +251,15 @@ header {
 }
 
 #save { background: #4285f4; color: white; }
-#cancel { background: #f1f3f4; color: #5f6368; }
+#save:hover{
+  background: #1b6ef4
+}
 
+#cancel { background: #f1f3f4; color: #554f4f}
+#cancel:hover{
+  color: rgb(255, 255, 255);
+  background: rgb(255, 77, 77);
+}
 
 .input-box{
   background-color: white;
