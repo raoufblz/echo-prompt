@@ -3,16 +3,18 @@
 
 // need to repair this
 
-// const prompt_container = document.querySelector(".container");
-// const createbtn = document.querySelector(".tab");
+const prompt_container = document.querySelector(".state");
+const createbtn = document.querySelector("#save");
 
-// createbtn.addEventListener("click", ()=> {
-//     let inputbox = document.createElement("p");
-//     inputbox.className = "input-box";
-//     inputbox.setAttribute("contenteditable" , "true");
-//     prompt_container.appendChild(inputbox)
-// })
+const prompt_content = document.getElementById("prompt-content");
 
+createbtn.addEventListener("click", ()=> {
+    let inputbox = document.createElement("p");
+    inputbox.className = "input-box";
+    inputbox.setAttribute("contenteditable" , "true");
+    inputbox.textContent = prompt_content.innerText; // i think this is for all the text
+    prompt_container.appendChild(inputbox)
+});
 
 const tabs = document.querySelectorAll('.tab'); 
 const all_content = document.querySelectorAll('.tab-content');
