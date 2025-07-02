@@ -3,61 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>prompt manager</title>
+    <title>My Prompts</title>
     <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=delete" />
+    <script src="popup.js" defer></script>
 </head>
 <body>
-    <div class="container"> 
-        <!--hope i could make it roundish-->
-        <header>
-            <div class="header-theme">
-            <h1 class="container-header">manage your prompts</h1>
-            <button class="theme-btn">theme</button>
-            </div>
-            <div class="tabs">
-                <button class="tab active" data-tab="prompts">my prompts</button>
-                <button class="tab" data-tab="add">add new</button>
-            </div>
-        </header>
-
-        <!--prompts tab-->
-        <div id="prompts-tab" class="tab-content active">
-            <div class="search-bar">
-                <input type="text" id="search-input" placeholder="Search prompts...">
-                <button id="search-button">🔍</button>
-            </div>
-      
-            <div class="prompts-list">
-                <div class="state">
-                    <p class="noprompts">No prompts saved yet</p>
-                    <!--
-                    <button class="add-prompt">Add your first prompt</button>
-                    -->
-                </div>
-            </div>
+    <header>
+        <h1>My Prompts</h1>
+        <div class="headerbtns">
+            <button id="addPromptBtn" class="add-prompt-btn">+ add prompt</button>
+            <button id="themeToggleBtn" class="theme-toggle-btn">🌙</button>
         </div>
+    </header>
+
+    <main id="promptsContainer" class="prompt-grid">
             
-        
-        <div id="add-tab" class="tab-content">
-            <div class="form-group">
-                <label for="prompt-title">Title</label>
-                <input type="text" id="prompt-title" placeholder="Short descriptive title">
-            </div>
+    </main>
 
-            <div class="form-group">
-                <label for="prompt-content">prompt content</label>
-                <textarea id="prompt-content" rows="5" placeholder="enter your prompt here..."></textarea>
+    <dialog id="promptDialog">
+        <div class="dialog-content">
+            <div class="dialog-header">
+                <h2 class="dialog-title" id="dialogTitle">Add new prompt</h2>
+                <button id="closeDialogBtn" class="close-btn">x</button>
             </div>
+            
+            <form id="promptForm">
+                <div class="form-group">
+                    <label for="promptTitle" class="form-label">Title</label>
+                    <input type="text" id="promptTitle" class="form-input" placeholder="Enter prompt Title.." required>
+                </div>
+                
+                 <div class="form-group">
+                    <label for="promptContent" class="form-label">Content</label>
+                    <textarea id="promptContent" class="form-textarea" placeholder="Write your prompt here.." required></textarea>
+                </div>
 
-            <div class="actions">
-                <button id="save">save prompt</button>
-                <button id="cancel">cancel</button>
-            </div>
-
-            </div>
+                <div class="dialog-actions">
+                    <button type="button" id="cancelDialogBtn" class="cancel-btn">Cancel</button>
+                    <button type="submit" class="save-btn">Save Prompt</button>
+                </div>
+            </form>
         </div>
-    </div>
-
-    <script src="popup.js"></script>
+    </dialog>
 </body>
 </html>
