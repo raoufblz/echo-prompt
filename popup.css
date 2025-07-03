@@ -29,6 +29,10 @@ header {
   margin-bottom: 30px;
 }
 
+.header-h1{
+  color: #e0e0e0;
+}
+
 .headerbtns {
   display: flex;
   gap: 15px;
