@@ -101,6 +101,9 @@ function renderPrompts() {
                 <button class="delete-btn" title="delete prompt">
                     <span class="material-symbols-outlined">delete</span>
                 </button>
+                <button class="insert-btn" data-prompt="{{ prompt.text }}">
+                    <span>insert</span>
+                </button>
             </div>
         </div>    
     `).join('');
