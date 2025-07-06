@@ -79,7 +79,7 @@ button {
 .search-btn {
   position: absolute;
   border: none;
-  background-color: #007BFF;
+  background-color: #efefef;
   color: white;
   cursor: pointer;
   transition: width 0.5s ease-in-out;
@@ -102,7 +102,7 @@ button {
 .search-input {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 40px;
     width: 0;
     height: 40px;
     padding: 25px 10px;
@@ -325,7 +325,7 @@ button {
 
 .cancel-btn:hover{
   background-color: #e74c3c;
-  color: #e0e0e0;
+  color: #ffffff;
   border: none;
 }
 
