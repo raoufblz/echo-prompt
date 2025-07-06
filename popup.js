@@ -1,7 +1,6 @@
 //i hope i could make this lmao
 
 
-
 let prompts = [];
 let editingPromptId = null;
 
@@ -102,7 +101,7 @@ function renderPrompts() {
                     <span class="material-symbols-outlined">delete</span>
                 </button>
                 <button class="insert-btn" data-prompt="{{ prompt.text }}">
-                    <span>insert</span>
+                    <span class="material-symbols-outlined">chat_paste_go</span>
                 </button>
             </div>
         </div>    

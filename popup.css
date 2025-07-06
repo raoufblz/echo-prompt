@@ -25,7 +25,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
   margin-bottom: 30px;
 }
 
@@ -42,31 +41,6 @@ button {
   cursor: pointer;
   transition: all 0.2s ease;
 }
-/* 
-.search-btn{
-  border: none;
-  width: 50px;
-  height: 50px;
-  justify-content: center;
-  font-size: 1.2rem; 
-  border-radius: 40px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  box-shadow: 0 4px 6px var(--shadow);
-  justify-content: center;
-
-}
-
-.search-btn:hover{
-  background-color: var(--primary-hover);
-  min-width: 250px;
-} */
-
-
-
-
 
 .search-container {
     position: relative;
@@ -131,8 +105,6 @@ button {
     opacity: 1;
 }
 
-
-
 .search-container:hover, .search-container:focus-within {
     width: 300px;
     opacity: 1;
@@ -147,7 +119,6 @@ button {
     width: calc(100% - 40px);
     opacity: 1;
 }
-
 
 .add-prompt-btn, .theme-toggle-btn {
   padding: 12px 20px;
@@ -352,7 +323,6 @@ button {
   --border: #3a4a55;
   --shadow: rgba(0, 0, 0, 0.3);
 }
-
 
 #promptDialog{
   background-color: transparent;
