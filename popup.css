@@ -47,7 +47,6 @@ button {
     width: 50px; 
     height: 50px;
     overflow: hidden;
-    transition: width 0.5s ease-in-out;
 }
 
 .search-btn {
@@ -86,7 +85,7 @@ button {
     color: black;
     font-size: 16px;
     border-radius: 30px;
-    transition: width 0.5s ease-in-out;
+    transition: left 0.5s ease-in-out;
     box-sizing: border-box;
     opacity: 0;
 }
