@@ -208,7 +208,18 @@ button {
 }
 
 .delete-btn:hover {
-  color: var(--danger);
+  color: red;
+  border-color: red;
+}
+
+.edit-btn:hover{
+  color: blue;
+  border-color: blue;
+}
+
+.insert-btn:hover{
+  color: rgb(0, 255, 0);
+  border-color: rgb(0, 255, 0);
 }
 
 .dialog-content {
