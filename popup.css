@@ -45,7 +45,6 @@ button {
     position: relative;
     width: 50px; 
     height: 50px;
-    overflow: hidden;
 }
 
 .search-btn {
@@ -170,7 +169,7 @@ button {
 }
 
 .prompt-title {
-  margin: 0 0 10px 0;
+  margin: 0 0 8px 0;
   font-size: 1.2rem;
   color: #2c3e50;
 }
@@ -180,18 +179,34 @@ button {
   flex-grow: 1;
   color: #34495e;
   line-height: 1.5;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
+  overflow: auto; 
+  display: block;  
+  max-height: 90px; 
+  padding: 5px 0;
+  scrollbar-width: thin;
+  scrollbar-color: #24f689 rgba(240, 240, 240, 0.8);
+
+}
+
+.prompt-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.prompt-content::-webkit-scrollbar-track {
+  background: rgba(240, 240, 240, 0.8);
+  border-radius: 10px;
+}
+
+.prompt-content::-webkit-scrollbar-thumb {
+  background:#24f689;
+  border-radius: 10px;
 }
 
 .prompt-actions {
   display: flex;
   justify-content: flex-end;
   gap: 10px;
-  margin-top: 15px;
+  margin-top: 8px;
 }
 
 .prompt-actions button {
