@@ -158,8 +158,57 @@ function handleContainerClick(event) {
         openPromptDialog(promptId);
     } else if (event.target.closest('.delete-btn')) {
         deletePrompt(promptId);
+    }  else if (event.target.closest('.insert-btn')) {
+        const prompt = prompts.find(p => p.id === promptId);
+        if (prompt) {
+            insertPrompt(prompt.content);
+        }
     }
 }
+
+
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        showNotification("Prompt copied to clipboard!");
+    });
+}
+
+function showNotification(message) {
+    const notification = document.createElement('div');
+    notification.textContent = message;
+    notification.style.position = 'fixed';
+    notification.style.bottom = '20px';
+    notification.style.right = '20px';
+    notification.style.background = '#4CAF50';
+    notification.style.color = 'white';
+    notification.style.padding = '10px';
+    notification.style.borderRadius = '5px';
+    notification.style.zIndex = '10000';
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        document.body.removeChild(notification);
+    }, 3000);
+}
+
+function insertPrompt(promptContent) {
+    chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
+        if (!tabs[0]) {
+            copyToClipboard(promptContent);
+            return;
+        }
+        
+        chrome.tabs.sendMessage(tabs[0].id, { 
+            action: "insertPrompt", 
+            content: promptContent
+        }, (response) => {
+            if (chrome.runtime.lastError || !response?.success) {
+                copyToClipboard(promptContent);
+            }
+        });
+    });
+}
+
 
 document.addEventListener('DOMContentLoaded', function() {
     prompts = loadPrompts();

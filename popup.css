@@ -17,8 +17,7 @@ body {
   margin: 0;
   padding: 20px;
   min-height: 100vh;
-  min-width: 600px;
-  transition: background-color 0.3s ease;
+  min-width: 650px;
 }
 
 header {
@@ -112,6 +111,8 @@ button {
 
 .search-container:hover .search-btn, .search-container:focus-within .search-btn {
     width: 40px;
+    cursor: default;
+    user-select: none;
     opacity: 0;
 }
 
