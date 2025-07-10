@@ -1,22 +1,26 @@
-save/edit/delete and use prompts 
+Save/edit/delete and use prompts 
 
 
-prototype:
+Prototype:
  - manifest.json
  - popup.html
  - popup.css
  - popup.js
  - content.js
+ - darkmode.js
 
 
-features:
- - my prompts, add new ✅
- - prompt managment, crud ✅
- - search function ✅
- - click to add to your ai chat ✅
- - light/dark mode 
- - categories + favorites 
+Features:
+ - my prompts, add new                                          ✅
+ - prompt management, crud                                      ✅
+ - search function                                              ✅
+ - click to add to your ai chat                                 ✅
+ - light/dark mode                                              ✅
+ - ~~categories~~ tags (are probably better) + favorites        
  - text placeholders to adjust prompts 
  - drag and drop to organize, add to categories 
+ - considering a three dots menu for drag and drop and adding
+   delete there to not hit it accidentally, maybe adding a 
+   confirmation for deletion 
 
- maybe that s alot of things (that s definetly a lot)
+Maybe that s a lot of things (that s definitely a lot)
