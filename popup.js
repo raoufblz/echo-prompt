@@ -125,7 +125,7 @@ function renderPrompts(promptsArray = prompts) {
                 <button class="delete-btn" title="delete prompt">
                     <span class="material-symbols-outlined">delete</span>
                 </button>
-                <button class="insert-btn" data-prompt="{{ prompt.text }}">
+                <button class="insert-btn" data-prompt="{{ prompt.text }}" title="insert prompt">
                     <span class="material-symbols-outlined">chat_paste_go</span>
                 </button>
             </div>

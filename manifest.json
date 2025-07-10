@@ -6,7 +6,7 @@
   "action": {
     "default_popup": "popup.html"
   },
-  "permissions": ["storage", "activeTab", "scripting", "clipboardWrite", "tabs"],
+  "permissions": ["storage", "activeTab", "scripting", "clipboardRead", "clipboardWrite", "tabs"],
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self'"
   },
@@ -15,15 +15,17 @@
     "https://chat.qwen.ai/*",
     "https://gemini.google.com/app/*",
     "https://*.brave.com/*",
-    "https://brave.com/*"
-  ],
+    "https://claude.ai/*",
+    "https://www.perplexity.ai/*"
+     ],
   "content_scripts": [{
     "matches": [
       "https://chat.deepseek.com/*", 
       "https://chat.qwen.ai/*",
       "https://gemini.google.com/app/*",
-      "https://*.brave.com/*"
-    ],
+      "https://claude.ai/*",
+      "https://www.perplexity.ai/*"
+      ],
     "js": ["content.js"],
     "run_at": "document_end",
     "all_frames": true

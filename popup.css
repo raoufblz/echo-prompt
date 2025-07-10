@@ -16,7 +16,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 20px;
-  min-height: 100vh;
+  min-height: 90vh;
   min-width: 650px;
 }
 
@@ -185,7 +185,9 @@ button {
   padding: 5px 0;
   scrollbar-width: thin;
   scrollbar-color: #d1d1d1 rgba(240, 240, 240, 0.8);
-
+  background-color: #e8fff9;
+  border-radius: 7px;
+  padding: 2px 6px;
 }
 
 .prompt-content::-webkit-scrollbar {
