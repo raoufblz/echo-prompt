@@ -26,7 +26,7 @@
       "https://claude.ai/*",
       "https://www.perplexity.ai/*"
       ],
-    "js": ["content.js"],
+    "js": ["content.js", "darkmode.js"],
     "run_at": "document_end",
     "all_frames": true
   }]

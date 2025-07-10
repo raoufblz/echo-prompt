@@ -14,6 +14,10 @@
   --btn-background-color: #edf0f1;
   --btn-border-color: #bdc3c7;
   --prompt-content-bg-color: rgba(227, 227, 227, 0.5);
+  --scrollbar-thumb: #d1d1d1;
+  --close-btn-default: #808080;
+  --empty-state-bg: rgba(255, 255, 255, 0.7);
+  --scrollbar-track: var(--scrollbar);
 }
 
 body {
@@ -33,8 +37,12 @@ header {
   margin-bottom: 30px;
 }
 
-.header-h1{
+.header-h1 {
   color: var(--primary);
+}
+
+h2{
+  color: var(--text);
 }
 
 .headerbtns {
@@ -48,9 +56,9 @@ button {
 }
 
 .search-container {
-    position: relative;
-    width: 50px; 
-    height: 50px;
+  position: relative;
+  width: 50px; 
+  height: 50px;
 }
 
 .search-btn {
@@ -60,7 +68,6 @@ button {
   color: var(--text);
   cursor: pointer;
   transition: width 0.5s ease-in-out;
-
   width: 50px;
   height: 50px;
   justify-content: center;
@@ -74,56 +81,55 @@ button {
   box-shadow: 0 4px 6px var(--shadow);
   justify-content: center;
   z-index: 2;
-
 }
 
 .search-input {
-    position: absolute;
-    top: 0;
-    left: 40px;
-    width: 0;
-    height: 40px;
-    padding: 25px 10px;
-    border: none;
-    outline: none;
-    background-color: var(--primary-hover);
-    color: var(--text);
-    font-size: 16px;
-    border-radius: 30px;
-    transition: left 0.5s ease-in-out;
-    box-sizing: border-box;
-    opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 40px;
+  width: 0;
+  height: 40px;
+  padding: 25px 10px;
+  border: none;
+  outline: none;
+  background-color: var(--primary-hover);
+  color: var(--text);
+  font-size: 16px;
+  border-radius: 30px;
+  transition: left 0.5s ease-in-out;
+  box-sizing: border-box;
+  opacity: 0;
 }
 
 .search-container:hover {
-    width: 300px;
+  width: 300px;
 }
 
 .search-container:hover .search-btn {
-    width: 40px;
-    opacity: 0;
+  width: 40px;
+  opacity: 0;
 }
 
 .search-container:hover .search-input {
-    width: calc(100% - 40px);
-    opacity: 1;
+  width: calc(100% - 40px);
+  opacity: 1;
 }
 
 .search-container:hover, .search-container:focus-within {
-    width: 300px;
-    opacity: 1;
+  width: 300px;
+  opacity: 1;
 }
 
 .search-container:hover .search-btn, .search-container:focus-within .search-btn {
-    width: 40px;
-    cursor: default;
-    user-select: none;
-    opacity: 0;
+  width: 40px;
+  cursor: default;
+  user-select: none;
+  opacity: 0;
 }
 
 .search-container:hover .search-input, .search-container:focus-within .search-input {
-    width: calc(100% - 40px);
-    opacity: 1;
+  width: calc(100% - 40px);
+  opacity: 1;
 }
 
 .add-prompt-btn, .theme-toggle-btn {
@@ -190,7 +196,7 @@ button {
   max-height: 90px; 
   padding: 5px 0;
   scrollbar-width: thin;
-  scrollbar-color: var(--scrollbar);
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
   background-color: var(--prompt-content-bg-color);
   border-radius: 7px;
   padding: 2px 6px;
@@ -201,12 +207,12 @@ button {
 }
 
 .prompt-content::-webkit-scrollbar-track {
-  background: var(--scrollbar);
+  background: var(--scrollbar-track);
   border-radius: 10px;
 }
 
 .prompt-content::-webkit-scrollbar-thumb {
-  background:#d1d1d1;
+  background: var(--scrollbar-thumb);
   border-radius: 10px;
 }
 
@@ -218,7 +224,7 @@ button {
 }
 
 .prompt-actions button {
-  background: rgba(0, 0, 0, 0.05);
+  background: var(--btn-background-color);
   border-radius: 8px;
   width: 36px;
   height: 36px;
@@ -236,12 +242,12 @@ button {
   border-color: var(--danger);
 }
 
-.edit-btn:hover{
+.edit-btn:hover {
   color: var(--ocean);
   border-color: var(--ocean);
 }
 
-.insert-btn:hover{
+.insert-btn:hover {
   color: var(--safe);
   border-color: var(--safe);
 }
@@ -252,7 +258,7 @@ button {
   padding: 10px 20px;
   width: 400px;
   max-width: 90vw;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 25px var(--shadow);
   position: relative;
 }
 
@@ -268,7 +274,7 @@ button {
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-  color: gray;
+  color: var(--close-btn-default);
 }
 
 .close-btn:hover {
@@ -281,12 +287,15 @@ button {
 }
 
 .form-label {
+  color: var(--text);
   display: block;
   margin-bottom: 8px;
   font-weight: 600;
 }
 
 .form-input, .form-textarea {
+  background-color: var(--background);
+  color: var(--text);
   width: 100%;
   padding: 12px;
   border: 1px solid var(--border);
@@ -315,6 +324,7 @@ button {
 .cancel-btn {
   background-color: var(--btn-background-color);
   border: 1px solid var(--btn-border-color);
+  color: var(--text);
 }
 
 .save-btn {
@@ -329,7 +339,7 @@ button {
   color: var(--card-bg);
 }
 
-.cancel-btn:hover{
+.cancel-btn:hover {
   background-color: var(--danger);
   color: var(--card-bg);
   border: none;
@@ -339,7 +349,7 @@ button {
   display: flex;
   text-align: center;
   padding: 40px;
-  background: rgba(255, 255, 255, 0.7);
+  background: var(--empty-state-bg);
   border-radius: 16px;
   max-width: 500px;
   margin: 50px auto;
@@ -351,29 +361,34 @@ button {
 }
 
 /* idk how to make dark theme for now */
-[data-theme="dark"] {
-  --primary: #e0e0e0;               
-  --primary-hover: #ffffff;          
-  --background: radial-gradient(#0f1a19, #071010); 
-  --card-bg: #1a2321;               
-  --text: #f0f0f0;                  
-  --border: #2a3a37;                
-  --shadow: rgba(0, 0, 0, 0.4);     
-  --danger: #ff6b6b;                
-  --safe: #52ff52;                  
-  --ocean: #39c5ff;                 
-  --scrollbar: rgba(80, 100, 100, 0.8); 
-  --btn-background-color: #1e2927;   
-  --btn-border-color: #2a3a37;       
-  --prompt-content-bg-color: rgba(30, 40, 38, 0.7); 
+body.darkmode{
+  --primary: #686868;
+  --primary-hover: #727272;
+  --background: #000000;
+  --card-bg: #383838;
+  --text: #f0f0f0;
+  --border: #2a3a37;
+  --shadow: rgba(0, 0, 0, 0.4);
+  --danger: #ff6b6b;
+  --safe: #52ff52;
+  --ocean: #39c5ff;
+  --scrollbar: rgba(80, 100, 100, 0.8);
+  --btn-background-color: #2b3130;
+  --btn-border-color: #2a3a37;
+  --prompt-content-bg-color: rgba(128, 128, 128, 0.304);
+  --scrollbar-thumb: #6a6a6a;
+  --close-btn-default: #a0a0a0;
+  --empty-state-bg: rgba(90, 90, 90, 0.5);
+  --scrollbar-track: var(--scrollbar);
 }
 
-#promptDialog{
+#promptDialog {
   background-color: transparent;
   border: none;
 }
 
-.material-symbols-outlined{
+.material-symbols-outlined {
+  color: var(--text);
   font-family: 'Material Symbols Outlined';
   font-weight: normal;
   font-style: normal;
