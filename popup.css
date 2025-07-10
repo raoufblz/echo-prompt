@@ -2,21 +2,27 @@
 :root {
   --primary: #efefef;
   --primary-hover: #ffffff;
-  --background: #a6ffe1;
+  --background: radial-gradient(rgb(0, 255, 217), rgb(0, 255, 136));
   --card-bg: #ffffff;
   --text: #333333;
   --border: #e0e0e0;
   --shadow: rgba(0, 0, 0, 0.1);
   --danger: #e74c3c;
+  --safe: rgb(52, 255, 52);
+  --ocean: rgb(39, 186, 255);
+  --scrollbar: rgba(240, 240, 240, 0.8);
+  --btn-background-color: #edf0f1;
+  --btn-border-color: #bdc3c7;
+  --prompt-content-bg-color: rgba(227, 227, 227, 0.5);
 }
 
 body {
-  background: radial-gradient(rgb(0, 255, 217), rgb(0, 255, 136));
+  background: var(--background);
   color: var(--text);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
   margin: 0;
   padding: 20px;
-  min-height: 90vh;
+  min-height: 92vh;
   min-width: 650px;
 }
 
@@ -28,7 +34,7 @@ header {
 }
 
 .header-h1{
-  color: #ffffff;
+  color: var(--primary);
 }
 
 .headerbtns {
@@ -50,8 +56,8 @@ button {
 .search-btn {
   position: absolute;
   border: none;
-  background-color: #efefef;
-  color: #333;
+  background-color: var(--primary);
+  color: var(--text);
   cursor: pointer;
   transition: width 0.5s ease-in-out;
 
@@ -80,8 +86,8 @@ button {
     padding: 25px 10px;
     border: none;
     outline: none;
-    background-color: white;
-    color: black;
+    background-color: var(--primary-hover);
+    color: var(--text);
     font-size: 16px;
     border-radius: 30px;
     transition: left 0.5s ease-in-out;
@@ -124,7 +130,7 @@ button {
   padding: 12px 20px;
   border: none;
   background-color: var(--primary);
-  color: rgb(45, 45, 45);
+  color: var(--text);
   border-radius: 40px;
   font-weight: 600;
   display: flex;
@@ -156,7 +162,7 @@ button {
 .prompt-card {
   background-color: var(--card-bg);
   border-radius: 16px;
-  padding: 20px;
+  padding: 12px 10px 10px 10px;
   box-shadow: 0 6px 12px var(--shadow);
   display: flex;
   flex-direction: column;
@@ -171,21 +177,21 @@ button {
 .prompt-title {
   margin: 0 0 8px 0;
   font-size: 1.2rem;
-  color: #2c3e50;
+  color: var(--text);
 }
 
 .prompt-content {
   margin: 0;
   flex-grow: 1;
-  color: #34495e;
+  color: var(--text);
   line-height: 1.5;
   overflow: auto; 
   display: block;  
   max-height: 90px; 
   padding: 5px 0;
   scrollbar-width: thin;
-  scrollbar-color: #d1d1d1 rgba(240, 240, 240, 0.8);
-  background-color: #e8fff9;
+  scrollbar-color: var(--scrollbar);
+  background-color: var(--prompt-content-bg-color);
   border-radius: 7px;
   padding: 2px 6px;
 }
@@ -195,7 +201,7 @@ button {
 }
 
 .prompt-content::-webkit-scrollbar-track {
-  background: rgba(240, 240, 240, 0.8);
+  background: var(--scrollbar);
   border-radius: 10px;
 }
 
@@ -226,18 +232,18 @@ button {
 }
 
 .delete-btn:hover {
-  color: red;
-  border-color: red;
+  color: var(--danger);
+  border-color: var(--danger);
 }
 
 .edit-btn:hover{
-  color: blue;
-  border-color: blue;
+  color: var(--ocean);
+  border-color: var(--ocean);
 }
 
 .insert-btn:hover{
-  color: rgb(0, 255, 0);
-  border-color: rgb(0, 255, 0);
+  color: var(--safe);
+  border-color: var(--safe);
 }
 
 .dialog-content {
@@ -262,7 +268,7 @@ button {
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-  color: #7f8c8d;
+  color: gray;
 }
 
 .close-btn:hover {
@@ -307,25 +313,25 @@ button {
 }
 
 .cancel-btn {
-  background-color: #ecf0f1;
-  border: 1px solid #bdc3c7;
+  background-color: var(--btn-background-color);
+  border: 1px solid var(--btn-border-color);
 }
 
 .save-btn {
-  background-color: #edf0f1;
-  color: rgb(63, 63, 63);
-  border: 1px solid #bdc3c7;
+  background-color: var(--btn-background-color);
+  color: var(--text);
+  border: 1px solid var(--btn-border-color);
 }
 
 .save-btn:hover {
-  background-color: rgb(0, 255, 0);
+  background-color: var(--safe);
   border: none;
-  color: #ffffff;
+  color: var(--card-bg);
 }
 
 .cancel-btn:hover{
-  background-color: #e74c3c;
-  color: #ffffff;
+  background-color: var(--danger);
+  color: var(--card-bg);
   border: none;
 }
 
@@ -346,11 +352,20 @@ button {
 
 /* idk how to make dark theme for now */
 [data-theme="dark"] {
-  --background: #1a2a35;
-  --card-bg: #2d3b44;
-  --text: #f0f0f0;
-  --border: #3a4a55;
-  --shadow: rgba(0, 0, 0, 0.3);
+  --primary: #e0e0e0;               
+  --primary-hover: #ffffff;          
+  --background: radial-gradient(#0f1a19, #071010); 
+  --card-bg: #1a2321;               
+  --text: #f0f0f0;                  
+  --border: #2a3a37;                
+  --shadow: rgba(0, 0, 0, 0.4);     
+  --danger: #ff6b6b;                
+  --safe: #52ff52;                  
+  --ocean: #39c5ff;                 
+  --scrollbar: rgba(80, 100, 100, 0.8); 
+  --btn-background-color: #1e2927;   
+  --btn-border-color: #2a3a37;       
+  --prompt-content-bg-color: rgba(30, 40, 38, 0.7); 
 }
 
 #promptDialog{
