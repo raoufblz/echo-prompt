@@ -231,6 +231,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: solid;
 }
 
 .prompt-actions button:hover {
@@ -365,7 +366,7 @@ button {
 body.darkmode{
   --primary: #000;
   --primary-hover: #727272;
-  --background: #000000;
+  --background: #202020;
   --card-bg: #383838;
   --text: #f0f0f0;
   --border: #2a3a37;
@@ -407,4 +408,29 @@ body.darkmode{
   align-items: center !important;
   justify-content: center !important;
   align-content: center !important;
+}
+
+.prompt-card {
+  transition: transform 0.3s ease, opacity 0.2s;
+}
+
+.prompt-card.drag-over {
+  transform: translateY(-5px);
+  border: 2px double var(--safe);
+}
+
+.drag-handle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+  color: var(--text);
+  font-size: 22px;
+  padding: 4px;
+  user-select: none;
+  margin-right: 6px;
+}
+
+.drag-handle:active {
+  cursor: grabbing;
 }

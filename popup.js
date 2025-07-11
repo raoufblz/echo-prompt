@@ -116,7 +116,10 @@ function renderPrompts(promptsArray = prompts) {
 
     promptsContainer.innerHTML = promptsArray.map(prompt => `
         <div class='prompt-card' data-prompt-id="${prompt.id}">
-            <h3 class='prompt-title'>${prompt.title}</h3>
+            <div style="display:flex; align-items:center;">
+                <h3 class='prompt-title' style="flex:1;">${prompt.title}</h3>
+                <span class="drag-handle material-symbols-outlined" title="Drag to re-order">drag_indicator</span>
+            </div>
             <p class='prompt-content'>${prompt.content}</p>
             <div class="prompt-actions">
                 <button class="edit-btn" title="edit prompt">
@@ -125,12 +128,13 @@ function renderPrompts(promptsArray = prompts) {
                 <button class="delete-btn" title="delete prompt">
                     <span class="material-symbols-outlined">delete</span>
                 </button>
-                <button class="insert-btn" data-prompt="{{ prompt.text }}" title="insert prompt">
+                <button class="insert-btn" title="insert prompt">
                     <span class="material-symbols-outlined">chat_paste_go</span>
                 </button>
             </div>
-        </div>    
+        </div>
     `).join('');
+    attachDragHandlers(); 
 }
 
 
@@ -210,9 +214,59 @@ function insertPrompt(promptContent) {
 }
 
 
+let draggedEl = null;
+function attachDragHandlers() {
+  document.querySelectorAll('.drag-handle').forEach(handle => {
+    const card = handle.closest('.prompt-card');
+
+    handle.setAttribute('draggable', true);
+
+    handle.addEventListener('dragstart', e => {
+      draggedEl = card;
+      card.style.opacity = '0.4';
+      e.dataTransfer.effectAllowed = 'move';
+    });
+
+    handle.addEventListener('dragend', () => {
+      card.style.opacity = '1';
+      draggedEl = null;
+    });
+  });
+
+  document.querySelectorAll('.prompt-card').forEach(card => {
+    card.addEventListener('dragover', e => {
+      if (!draggedEl) return;
+      e.preventDefault();
+      e.dataTransfer.dropEffect = 'move';
+      if (card !== draggedEl) card.classList.add('drag-over');
+    });
+
+    card.addEventListener('dragleave', () => card.classList.remove('drag-over'));
+
+    card.addEventListener('drop', e => {
+      if (!draggedEl || card === draggedEl) return;
+      e.preventDefault();
+      card.classList.remove('drag-over');
+
+      const container = document.getElementById('promptsContainer');
+      const allCards = [...container.querySelectorAll('.prompt-card')];
+      const draggedIdx = allCards.indexOf(draggedEl);
+      const targetIdx = allCards.indexOf(card);
+
+      const [removed] = prompts.splice(draggedIdx, 1);
+      prompts.splice(targetIdx, 0, removed);
+
+      savePrompts();
+      renderPrompts(filterPrompts(document.querySelector('.search-input').value));
+    });
+  });
+}
+
+
 document.addEventListener('DOMContentLoaded', function() {
     prompts = loadPrompts();
     renderPrompts();
+    attachDragHandlers();   
 
     document.getElementById('addPromptBtn').addEventListener('click', () => openPromptDialog());
     document.getElementById('closeDialogBtn').addEventListener('click', closePromptDialog);
