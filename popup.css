@@ -38,7 +38,7 @@ header {
 }
 
 .header-h1 {
-  color: var(--primary);
+  color: var(--text);
 }
 
 h2{
@@ -361,8 +361,9 @@ button {
 }
 
 /* idk how to make dark theme for now */
+/* how do i choose better colors */
 body.darkmode{
-  --primary: #686868;
+  --primary: #000;
   --primary-hover: #727272;
   --background: #000000;
   --card-bg: #383838;
@@ -374,7 +375,7 @@ body.darkmode{
   --ocean: #39c5ff;
   --scrollbar: rgba(80, 100, 100, 0.8);
   --btn-background-color: #2b3130;
-  --btn-border-color: #2a3a37;
+  --btn-border-color: #383838;
   --prompt-content-bg-color: rgba(128, 128, 128, 0.304);
   --scrollbar-thumb: #6a6a6a;
   --close-btn-default: #a0a0a0;
