@@ -18,7 +18,7 @@ Features:
  - light/dark mode                                              ✅
  - ~~categories~~ tags (are probably better) + favorites        
  - text placeholders to adjust prompts 
- - drag and drop to organize, add to categories 
+ - drag and drop to organize.✅
  - considering a three dots menu for drag and drop and adding
    delete there to not hit it accidentally, maybe adding a 
    confirmation for deletion 
