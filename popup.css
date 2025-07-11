@@ -434,3 +434,8 @@ body.darkmode{
 .drag-handle:active {
   cursor: grabbing;
 }
+
+body.darkmode .search-input::placeholder {
+  color: #f0f0f0;
+  opacity: 0.9;
+}
