@@ -2,7 +2,6 @@
 :root {
   --primary: #efefef;
   --primary-hover: #ffffff;
-  /* --background: radial-gradient(rgb(0, 255, 217), rgb(0, 255, 136)); */ /*i liked mint*/
   --background: #abcdef;
   --card-bg: #ffffff;
   --text: #333333;
@@ -362,7 +361,6 @@ button {
   margin-top: 20px;
 }
 
-/* idk how to make dark theme for now */
 /* how do i choose better colors */
 body.darkmode{
   --primary: #000;
