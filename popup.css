@@ -18,6 +18,7 @@
   --close-btn-default: #808080;
   --empty-state-bg: rgba(255, 255, 255, 0.7);
   --scrollbar-track: var(--scrollbar);
+  --background-input: #efefef;
 }
 
 body {
@@ -295,7 +296,7 @@ button {
 }
 
 .form-input, .form-textarea {
-  background-color: var(--background);
+  background-color: var(--background-input);
   color: var(--text);
   width: 100%;
   padding: 12px;
@@ -381,6 +382,7 @@ body.darkmode{
   --close-btn-default: #a0a0a0;
   --empty-state-bg: rgba(90, 90, 90, 0.5);
   --scrollbar-track: var(--scrollbar);
+  --background-input: #161616;
 }
 
 #promptDialog {
@@ -401,7 +403,7 @@ body.darkmode{
   white-space: nowrap;
   word-wrap: normal;
   direction: ltr;
-  -webkit-font-feature-settings: 'liga';
+/*   -webkit-font-feature-settings: 'liga'; */
   -webkit-font-smoothing: antialiased;
   display: flex !important;
   align-items: center !important;
@@ -437,4 +439,17 @@ body.darkmode{
 body.darkmode .search-input::placeholder {
   color: #f0f0f0;
   opacity: 0.9;
+}
+
+#themeIcon:hover{
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
