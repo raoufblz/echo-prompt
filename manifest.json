@@ -24,7 +24,8 @@
       "https://chat.qwen.ai/*",
       "https://gemini.google.com/app/*",
       "https://claude.ai/*",
-      "https://www.perplexity.ai/*"
+      "https://www.perplexity.ai/*",
+      "https://www.kimi.com/*"
       ],
     "js": ["content.js", "darkmode.js"],
     "run_at": "document_end",
