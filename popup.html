@@ -26,6 +26,15 @@
         </div>
     </header>
 
+    <div class="sort-by-tag">
+            <h2>tags place</h2>
+            <button class="sort-btn" title="sort prompt">
+                <span class="material-symbols-outlined">filter_list</span>
+            </button>
+    </div>
+        
+    <hr class="the-line">
+
     <main id="promptsContainer" class="prompt-grid">
             
     </main>
@@ -34,7 +43,7 @@
         <div class="dialog-content">
             <div class="dialog-header">
                 <h2 class="dialog-title" id="dialogTitle">Add new prompt</h2>
-                <button id="closeDialogBtn" class="close-btn">x</button>
+                <button id="closeDialogBtn" class="close-btn">X</button>
             </div>
             
             <form id="promptForm">
@@ -46,6 +55,8 @@
                  <div class="form-group">
                     <label for="promptContent" class="form-label">Content</label>
                     <textarea id="promptContent" class="form-textarea" placeholder="Write your prompt here.." required></textarea>
+                    <label for="promptTags" class="form-label">Tags</label>
+                    <input type="text" id="promptTags" class="form-input" placeholder="tag name">
                 </div>
 
                 <div class="dialog-actions">
