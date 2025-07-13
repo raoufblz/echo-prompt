@@ -453,3 +453,44 @@ body.darkmode .search-input::placeholder {
     transform: rotate(360deg);
   }
 }
+.search-container:hover, .search-container:focus-within {
+    width: 300px;
+  }
+  
+.search-container:hover .search-btn,
+  .search-container:focus-within .search-btn {
+    width: 40px !important;
+    opacity: 0 !important;
+  }
+
+/* Firefox */
+@supports (-moz-appearance: none) {
+  :root {
+      min-width: 650px;
+  }
+  
+  body {
+    min-width: 700px;
+    min-height: 500px;
+  }
+  
+  .search-container:hover,
+  .search-container:focus-within {
+    width: 300px;
+  }
+
+  .search-container:hover .search-btn,
+  .search-container:focus-within .search-btn {
+    width: 40px !important;
+    opacity: 0 !important;
+  }
+
+  body.darkmode ::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+  }
+
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined', sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
