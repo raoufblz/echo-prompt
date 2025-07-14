@@ -312,6 +312,13 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('cancelDialogBtn').addEventListener('click', closePromptDialog);
     document.getElementById('promptForm').addEventListener('submit', savePrompt);
 
+    document.addEventListener('keydown', (e) => { // ctrl + k to openPromptDialog
+        if (e.ctrlKey && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        openPromptDialog();
+    }
+    });
+
     document.getElementById('promptsContainer').addEventListener('click', handleContainerClick);
     document.body.addEventListener('click', e => {
         if (e.target.id === 'emptyStateAddBtn') openPromptDialog();
