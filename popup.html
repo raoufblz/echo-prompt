@@ -14,12 +14,12 @@
         <h1 class="header-h1">My Prompts</h1>
         <div class="headerbtns">
             <div class="search-container">
-                <button class="search-btn"></button>
+                <button class="search-btn">
                 <span class="material-symbols-outlined search-btn">search</span>
                 </button>
                 <input type="text" class="search-input" placeholder="Enter your search...">
             </div>
-            <button id="addPromptBtn" class="add-prompt-btn">+ add prompt</button>
+            <button id="addPromptBtn" class="add-prompt-btn">add prompt</button>
             <button id="themeToggleBtn" class="theme-toggle-btn">
                 <span id="themeIcon" class="material-symbols-outlined">dark_mode</span>
             </button>
@@ -27,7 +27,7 @@
     </header>
 
     <div class="sort-by-tag">
-            <h2>tags place</h2>
+            <div class="tag-container"></div>
             <button class="sort-btn" title="sort prompt">
                 <span class="material-symbols-outlined">filter_list</span>
             </button>
@@ -35,15 +35,16 @@
         
     <hr class="the-line">
 
-    <main id="promptsContainer" class="prompt-grid">
-            
+    <main id="promptsContainer" class="prompt-grid">     
     </main>
 
     <dialog id="promptDialog">
         <div class="dialog-content">
             <div class="dialog-header">
                 <h2 class="dialog-title" id="dialogTitle">Add new prompt</h2>
-                <button id="closeDialogBtn" class="close-btn">X</button>
+                <button id="closeDialogBtn" class="close-btn" title="close">
+                    <span class="material-symbols-outlined">close</span>       
+                </button>
             </div>
             
             <form id="promptForm">
