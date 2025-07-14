@@ -504,16 +504,12 @@ body.darkmode .search-input::placeholder {
 .sort-btn{
   padding: 12px 20px;
   border: none;
-  background-color: var(--background);
+  background-color: transparent;
   color: var(--text);
   cursor: auto;
-  border-radius: 24px;
-  font-weight: 600;
   display: flex;
   align-items: center;
   gap: 8px;  
-  width: 50px;
-  height: 50px;
   justify-content: center;
   font-size: 1.2rem;
 }
@@ -569,7 +565,6 @@ body.darkmode .search-input::placeholder {
   white-space: nowrap;
   -ms-overflow-style: none;
   scrollbar-width: none; 
-  width: 512px;
 }
 
 .prompt-tags .tag-pill {
@@ -590,3 +585,13 @@ body.darkmode .search-input::placeholder {
 /* sometimes i want to go on a journey of trying to delete as much lines as possible 
  * and still have it work as i wanted, but i know i ll regret that journey
  */
+
+.tags-n-buttons > div:first-child {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.prompt-actions {
+  flex: 0 0 auto; 
+  margin-left: 10px;
+}
