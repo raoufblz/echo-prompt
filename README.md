@@ -16,7 +16,8 @@ Features:
  - search function                                              ✅
  - click to add to your ai chat                                 ✅
  - light/dark mode                                              ✅
- - ~~categories~~ tags (are probably better) + favorites        
+ - ~~categories~~ tags (are probably better) ✅
+ + favorites         
  - text placeholders to adjust prompts 
  - drag and drop to organize.✅
  - considering a three dots menu for drag and drop and adding
