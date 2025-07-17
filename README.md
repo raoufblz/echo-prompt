@@ -17,7 +17,7 @@ prompts-manager/
     └── build.js
 </pre>
 
-Features:
+## Features:
  - my prompts, add new ✅
  - Add / edit / delete & insert prompts ✅
  - Search titles & content✅
@@ -27,3 +27,13 @@ Features:
  - drag and drop to organize ✅
  - favorites (soon)
  - placeholders (soon?????)
+
+## Build & Packages
+<div align="center">
+    
+| Target | Command | Output |
+|--------|---------|--------|
+| **Chromium-based browsers** (Manifest V3) | `node scripts/build.js` | `dist/chromium.zip` |
+| **Firefox-based browsers** (Manifest V2) | `node scripts/build.js` | `dist/firefox.zip` |
+
+</div>
