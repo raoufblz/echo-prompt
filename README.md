@@ -1,5 +1,6 @@
 A browser extension that lets you save, edit, tag, delete and insert prompts
 
+<pre>
 prompts-manager/
 ├── README.md
 ├── .gitignore
@@ -14,7 +15,7 @@ prompts-manager/
 │   └── manifest-firefox.json
 └── scripts/
    └── build.js
-
+</pre>
 
 Features:
  - my prompts, add new ✅
