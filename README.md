@@ -1,27 +1,28 @@
-Save/edit/delete and use prompts 
+A browser extension that lets you save, edit, tag, delete and insert prompts
 
-
-Prototype:
- - manifest.json
- - popup.html
- - popup.css
- - popup.js
- - content.js
- - darkmode.js
+prompts-manager/
+├── README.md
+├── .gitignore
+├── src/
+│   ├── popup.js
+│   ├── content.js
+│   ├── darkmode.js
+│   ├── popup.css
+│   └── popup.html
+├── manifest/
+│   ├── manifest-chromium.json
+│   └── manifest-firefox.json
+└── scripts/
+   └── build.js
 
 
 Features:
- - my prompts, add new                                          ✅
- - prompt management, crud                                      ✅
- - search function                                              ✅
- - click to add to your ai chat                                 ✅
- - light/dark mode                                              ✅
- - ~~categories~~ tags (are probably better) ✅
- + favorites         
- - text placeholders to adjust prompts 
- - drag and drop to organize.✅
- - considering a three dots menu for drag and drop and adding
-   delete there to not hit it accidentally, maybe adding a 
-   confirmation for deletion 
-
-Maybe that s a lot of things (that s definitely a lot)
+ - my prompts, add new ✅
+ - Add / edit / delete & insert prompts ✅
+ - Search titles & content✅
+ - click to add to your ai chat ✅
+ - light / dark theme mode ✅
+ - tags ✅
+ - drag and drop to organize ✅
+ - favorites (soon)
+ - placeholders (soon?????)
