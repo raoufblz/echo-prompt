@@ -18,17 +18,26 @@ prompts-manager/
 </pre>
 
 ## Features:
- - my prompts, add new ✅
- - Add / edit / delete & insert prompts ✅
+ - Add (ctrl+k) / edit / delete & insert prompts ✅
  - Search titles & content✅
- - click to add to your ai chat ✅
+ - click to insert into your chat ✅
  - light / dark theme mode ✅
  - tags ✅
  - drag and drop to organize ✅
  - favorites (soon)
  - placeholders (soon?????)
 
-## Build & Packages
+
+## screenshots:
+
+<p align="center">
+  <img src="assets/addnew.png" width="400">
+  <img src="assets/addprompt.png" width="400">
+  <img src="assets/darkmode.png" width="400">
+</p>
+
+
+## Build & Packages:
 <div align="center">
     
 | Target | Command | Output |
