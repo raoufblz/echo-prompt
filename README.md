@@ -14,7 +14,7 @@ prompts-manager/
 │   ├── manifest-chromium.json
 │   └── manifest-firefox.json
 └── scripts/
-   └── build.js
+    └── build.js
 </pre>
 
 Features:
