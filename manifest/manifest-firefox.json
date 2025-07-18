@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Prompts Manager",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Save and use AI prompts quickly",
   "browser_action": {
     "default_popup": "popup.html"
@@ -14,21 +14,23 @@
     "tabs",
     "https://chat.deepseek.com/*",
     "https://chat.qwen.ai/*",
-    "https://gemini.google.com/app/*",
+    "https://gemini.google.com/*",
     "https://*.brave.com/*",
     "https://claude.ai/*",
     "https://www.perplexity.ai/*",
-    "https://www.kimi.com/*"
+    "https://www.kimi.com/*",
+    "https://t3.chat/*"
   ],
   "content_scripts": [
     {
       "matches": [
         "https://chat.deepseek.com/*",
         "https://chat.qwen.ai/*",
-        "https://gemini.google.com/app/*",
+        "https://gemini.google.com/*",
         "https://claude.ai/*",
         "https://www.perplexity.ai/*",
-        "https://www.kimi.com/*"
+        "https://www.kimi.com/*",
+        "https://t3.chat/*"
       ],
       "js": ["content.js", "darkmode.js"],
       "run_at": "document_end",
