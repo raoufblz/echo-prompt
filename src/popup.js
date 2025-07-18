@@ -55,7 +55,7 @@ function savePrompt(event) {
     if (!title || !content) return; // Stops the function immediately if either the title or content field is blank
 
     const tags = tagsRaw          // Split,trim,lowercase,remove emptinesse,a set to delete duplicates
-        ? [ ... new set(tagsRaw.split(',').map(t => t.trim().toLowerCase()).filter(Boolean))]
+        ? [ ... new Set(tagsRaw.split(',').map(t => t.trim().toLowerCase()).filter(Boolean))]
         : [];
 
     if (editingPromptId) {
