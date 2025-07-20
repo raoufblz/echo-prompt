@@ -46,3 +46,6 @@ prompts-manager/
 | **Firefox-based browsers** (Manifest V2) | `node scripts/build.js` | `dist/firefox.zip` |
 
 </div>
+
+to fix:
+ - there s double insertion on kimi and perplexity
