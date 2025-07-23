@@ -29,7 +29,7 @@ Echo is a prompt browser extension for AI chatbots. Save, organize, and insert y
 
 **Option 1: Download Pre-Built Package from Releases**
 
-Pre-built packages for Chrome/Chromium and Firefox are available on the [Releases](https://github.com/raoufblz/prompt-extension/releases) page. Download the appropriate `.zip` file and follow the manual installation steps below.
+Pre-built packages for Chrome/Chromium and Firefox are available on the [Releases](https://github.com/raoufblz/echo-prompt/releases) page. Download the appropriate `.zip` file and follow the manual installation steps below.
 
 **Option 2: Install from Source (Developer/Testing)**
 
