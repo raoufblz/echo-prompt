@@ -89,7 +89,7 @@ Currently supports inserting prompts into:
 ## Structure:
 
 <pre>
-prompts-manager/
+echo-prompt/
 ├── README.md
 ├── .gitignore
 ├── src/
